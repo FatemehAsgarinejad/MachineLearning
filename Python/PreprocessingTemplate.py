@@ -37,6 +37,7 @@ labelencoder_X = LabelEncoder() #Creating an object from LabelEncoder class
 X[:,0] =labelencoder_X.fit_transform(X[:,0])
 
 #Adding new columns to x for the first column
+from sklearn.preprocessing import OneHotEncoder
 onehotencoder = OneHotEncoder(categorical_features=[0])
 X = onehotencoder.fit_transform(X).toarray()
 
