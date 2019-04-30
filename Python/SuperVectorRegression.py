@@ -33,6 +33,13 @@ plt.scatter(X, Y, color='navy')
 plt.plot(X, regressor.predict(X), color='gray')
 plt.show()
 
+#Smoother curve plot
+X_grid = np.arange(min(X), max(X), 0.1)
+X_grid = X_grid.reshape((len(X_grid),1))
+plt.scatter(X, Y, color='navy')
+plt.plot(X_grid, regressor.predict(X_grid), color='gray')
+plt.show()
+
 
 
 
